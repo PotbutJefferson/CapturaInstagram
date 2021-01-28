@@ -24,7 +24,6 @@ while has_next_page: # Fazendo paginação
     publicacoes = dados['graphql']['hashtag']['edge_hashtag_to_media']['edges']
     
     for publicacao in publicacoes:
-    
         legenda   = publicacao['node']['edge_media_to_caption']['edges'][0]['node']['text']
         n_comm    = publicacao['node']['edge_media_to_comment']['count']
         n_like    = publicacao['node']['edge_liked_by']['count']
